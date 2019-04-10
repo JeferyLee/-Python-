@@ -8,6 +8,13 @@
 map()函数
 
 """
+#对于列表list:
+list.append()
+# list.pop(index=i)     #pop() 函数用于移除列表中的一个元素（默认最后一个元素），并且返回该元素的值
+# list[i]
+# list[i]=a
+# list.insert(index,obj)
+# list.count(obj)   #统计特定的对象出现的次数。
 
 # 给出一个“被压缩的”序列，zip可以被用来解压序列
 pitchers = [('Nolan', 'Ryan'), ('Roger', 'Clemens'),

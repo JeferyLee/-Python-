@@ -1,6 +1,9 @@
 import pandas as pd
 import numpy as np
+"""
+pandas中DataFrame常用的功能
 
+"""
 df1=pd.DataFrame(np.arange(20).reshape(4,5),index=[1,2,3,4],columns=list('abcde'))
 
 #常用描述

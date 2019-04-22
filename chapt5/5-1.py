@@ -13,6 +13,8 @@ pandas 是Python中重要的数据分析库
 
 pandas中两种重要的数据结构
     Series和DataFrame
+    
+    df.reindex()方法可以对DataFrame对象行或列进行指定顺序排序
 
 """
 import pandas as pd

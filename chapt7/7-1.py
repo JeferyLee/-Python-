@@ -14,8 +14,8 @@
     移除重复数据
     替换值
     重命名轴索引
-    
-
+    离散化和面元划分
+    检测和过滤异常值
 
 """
 
@@ -94,6 +94,30 @@ data.rename(index=str.title,columns=str.upper)
 data.rename(index={'OHIO':'INDIANA'},
             columns={'three':'peekaboo'})
 
+#离散化和面元划分
 
+num=[20, 22, 25, 27, 21, 23, 37, 31, 61, 45, 41, 32]
+bins=[18,25,35,60,100]
+cats=pd.cut(num,bins)
 
+#可以传递列表或数组到 labels, 设置对应的面元名称
+group_names=['Youth', 'YoungAdult', 'MiddleAged', 'Senior']
+pd.cut(num,bins,labels=group_names)
+
+#如果向cut函数传递的是面元的数量，则将均匀划分
+pd.cut(num,4)
+
+#检测和过滤异常值
+
+data=pd.DataFrame(np.random.randn(1000,4))
+
+#找出某列中绝对值大于3的值
+col=data[2]
+col[np.abs(col)>3]
+
+#选出大于3或小于-3的行
+data[(np.abs(data)>3).any(1)]
+
+#将data值限制在区间-3到3之间
+data[np.abs(data)>3]=np.sign(data)*3
 
